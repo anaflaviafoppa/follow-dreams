@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+  --green: #738d5b;
+  --orange: #e85914;
+  --black: #000000;
+  --cream: #dedbd9;
+}
+
+
+// media-queries
+$media-query-smallest: 37.5em; // 600px
+$media-query-smaller: 46.87em; // 750px
+$media-query-small:  59em; // 950px
+$media-query-medium: 81.25em; // 1300px
+$media-query-large: 105em; // 1366px
+$media-query-larger: 112.5em, // 1800px
+
+
