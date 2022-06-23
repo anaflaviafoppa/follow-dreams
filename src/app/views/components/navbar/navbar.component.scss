@@ -1,0 +1,32 @@
+.navbar-ana {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+
+  &--dot {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 2.5rem;
+    background-color: var(--black);
+    border-radius:50%;
+  }
+
+  &--links{
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    li {
+      margin-right: 2rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+  }
+}

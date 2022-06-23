@@ -1,0 +1,87 @@
+.main-ana {
+  height: 80vh;
+
+  &--content {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+  }
+
+  &--name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    h1{
+      font-weight: 700;
+      font-size: 25.6rem;
+      line-height: 20rem;
+      margin: 0;
+    }
+  }
+
+  &--images {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: right;
+    z-index: 1;
+  }
+
+
+  &--images, &--stripes {
+    display: flex;
+    height: 36rem;
+  }
+
+  &--stripes-larger,
+  &--stripes-light
+  {
+    height: 100%;
+    background-color: var(--black);
+    width: 0.5rem;
+    margin-left: 1rem;
+  }
+
+  &--stripes-light {
+    width: 0.5rem;
+  }
+
+  &--stripes-larger {
+    width: 1rem;
+  }
+
+  &--list {
+    background-color: var(--cream);
+    align-content: center;
+    align-items: center;
+    border-radius: 0rem 0rem 15rem 0rem;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: 1rem;
+    width: calc(40% - 1rem);
+    max-width: calc(40% - 1rem);
+
+  }
+}
+
+.experience-ana {
+  background-color: var(--cream);
+
+  &--description {
+    display: grid;
+    grid-template-columns: 25vw 1fr;
+  }
+
+  &--experiences-brand {
+    border-bottom: 0.5rem solid var(--black);
+  }
+
+}
