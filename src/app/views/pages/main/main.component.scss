@@ -61,7 +61,7 @@
     height: 36rem;
     margin-left: 1rem;
     background-position: center center;
-    background-image: url("../../../../assets/main-curves.jpg");
+    background-image: url("../../../../assets/images/main-curves.jpg");
   }
 
   &--list {
@@ -91,4 +91,36 @@
     border-bottom: 0.5rem solid var(--black);
   }
 
+}
+
+.about-me-ana{
+  display: grid;
+  grid-template-columns: 55vw 1fr;
+  grid-gap: 8rem;
+  min-height: 100vh;
+  align-items: center;
+
+
+  &--image {
+    background-image: url("../../../../assets/images/Perfil.png");
+    height: calc(100% - 25rem);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &--text {
+    max-width: 80%;
+    align-self: flex-end;
+
+    h2 {
+      font-weight: 700;
+    }
+
+    p{
+      font-size: 2.4rem;
+      line-height: 1.4;
+    }
+
+  }
 }
