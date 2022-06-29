@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ana-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  styleUrls: ['./styles/main.component.scss',
+  './styles/main-name.component.scss']
 })
 export class MainComponent implements OnInit {
 
