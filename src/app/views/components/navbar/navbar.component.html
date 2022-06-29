@@ -1,13 +1,22 @@
 <nav class="navbar-ana wrapper">
-  <div class="navbar-ana--dot">
+  <div class="navbar-ana--stripes"
+       *ngIf="isSmallDevice()"
+  (click)="expandNavBar()">
+    <div class="navbar-ana--stripes-light"></div>
+    <div class="navbar-ana--stripes-light"></div>
   </div>
 
-  <div  class="navbar-ana--links">
-    <ul>
-      <li>Experience</li>
-      <li>About me</li>
-      <li>FAQ</li>
-      <li>Contact me</li>
-    </ul>
+  <div *ngIf="!isSmallDevice() || isNavBarExpanded">
+    <div class="navbar-ana--dot">
+    </div>
+
+    <div  class="navbar-ana--links">
+      <ul>
+        <li>Experience</li>
+        <li>About me</li>
+        <li>FAQ</li>
+        <li>Contact me</li>
+      </ul>
+    </div>
   </div>
 </nav>

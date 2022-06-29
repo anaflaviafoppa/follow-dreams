@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@use "src/app/utils/variables" as v;
+
 :root{
   --green: #738d5b;
   --orange: #e85914;
@@ -9,30 +11,19 @@
   //utils
   --arrow-down: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDE3LjYyMUwzLjkzODk2IDkuNTYxMDNMNi4wNjA5NiA3LjQzOTAzTDEyIDEzLjM3OUwxNy45MzkgNy40MzkwM0wyMC4wNjEgOS41NjEwM0wxMiAxNy42MjFaIiBmaWxsPSIjNjY2NjY2Ii8+Cjwvc3ZnPgo=');
   --arrow-up: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3LjkzOSAxNi41NjFMMTIgMTAuNjIxTDYuMDYwOTYgMTYuNTYxTDMuOTM4OTYgMTQuNDM5TDEyIDYuMzc5MDNMMjAuMDYxIDE0LjQzOUwxNy45MzkgMTYuNTYxWiIgZmlsbD0iIzY2NjY2NiIvPgo8L3N2Zz4=');
+
+  --position-name-main: 10%;
 }
-
-
-// media-queries
-$media-query-smallest: 37.5em; // 600px
-$media-query-smaller: 46.87em; // 750px
-$media-query-small:  59em; // 950px
-$media-query-medium: 81.25em; // 1300px
-$media-query-large: 105em; // 1366px
-$media-query-larger: 112.5em; // 1800px
 
 html {
   box-sizing: border-box;
   height: 100%;
   font-size: 62.5%;
   line-height: 1.6;
-
-  @media only screen and (max-width:  $media-query-medium) {
-    font-size: 47%;
-  }
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   height: auto;
   overflow-x: hidden;
   color: var(--black);
@@ -61,11 +52,11 @@ body::-webkit-scrollbar-thumb {
 .wrapper{
   padding: 3rem 5rem 0rem;
 
-  @media only screen and (max-width:  $media-query-smallest) {
+  @media only screen and (max-width:  v.$media-query-smallest) {
     padding: 3rem 2rem 0rem;
   }
 
-  @media only screen and (max-width:  $media-query-small) and (min-width: $media-query-smallest) {
+  @media only screen and (max-width:  v.$media-query-small) and (min-width: v.$media-query-smallest) {
     padding: 3rem 3rem 0rem;
   }
 }
@@ -76,8 +67,20 @@ p {
 }
 
 h1 {
-  font-size: 6.5rem;
-  font-style: normal;
+  font-weight: 700;
+  font-size: calc(100vw/9);
+  line-height: calc(100vw/10);
+  margin: 0;
+
+  @media only screen and (max-width:  v.$media-query-small) {
+    font-size: calc(100vw/8);
+    line-height: calc(100vw/9);
+  }
+
+  @media only screen and (max-width:  v.$media-query-small) and (min-width: v.$media-query-smallest) {
+    font-size: calc(100vw/7.5);
+    line-height: calc(100vw/10);
+  }
 }
 
 h2 {
@@ -91,6 +94,11 @@ h3 {
   font-style: normal;
 }
 
+h4 {
+  font-size: 2.4rem;
+  font-style: normal;
+}
+
 ul {
   list-style: none;
   font-size: 3.5rem;
@@ -99,6 +107,14 @@ ul {
   line-height: 1.4;
   padding: 0;
   margin: 0;
+
+  @media only screen and (max-width:  v.$media-query-small) {
+    font-size: 2.8rem;
+  }
+
+  @media only screen and (max-width:  v.$media-query-medium) and (min-width: v.$media-query-smallest) {
+    font-size: 3.2rem;
+  }
 }
 
 
