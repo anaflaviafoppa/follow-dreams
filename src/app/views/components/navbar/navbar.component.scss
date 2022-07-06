@@ -1,9 +1,21 @@
+@use "src/app/utils/variables" as v;
+
 .navbar-ana {
   position: sticky;
   top: 0;
   z-index: 2;
+  transition: var(--transition);
+  background-color: var(--purple);
+  height: var(--height-nav-bar);
   display: flex;
-  align-items: center;
+
+
+  &--controller {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
 
   &--dot {
     height: 4rem;
@@ -11,6 +23,14 @@
     margin-right: 2.5rem;
     background-color: var(--black);
     border-radius:50%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &--content {
+    display: flex;
   }
 
   &--links{
@@ -22,7 +42,6 @@
 
     li {
       margin-right: 2rem;
-
       background-image: linear-gradient(
           to right,
           var(--cream),
@@ -47,7 +66,7 @@
     min-width: 4rem;
     display: flex;
     flex-direction: column;
-    
+
     &:hover {
       cursor: pointer;
     }
@@ -58,5 +77,62 @@
     background-color: var(--black);
     margin-bottom: 1rem;
     height: 0.5rem;
+    transition: var(--transition);
+  }
+
+  &--stripes-cross {
+    transition: var(--transition);
+    -webkit-transform: rotate(-45deg) translate(20%,-50%);
+    transform: rotate(-45deg) translate(20%, -50%);
+
+    &:first-of-type {
+      -webkit-transform: rotate(45deg) translate(20%, 50%);
+      transform: rotate(45deg) translate(20%,50%);
+    }
+  }
+
+
+
+  @media only screen and (max-width:  v.$media-query-smaller) {
+   &--content {
+     height: 100vh;
+   }
+
+    &--links {
+      ul {
+        height: 80vh;
+        display: block;
+      }
+
+      li {
+        font-size: 9rem;
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+        line-height: 0.8;
+      }
+    }
   }
 }
+
+
+.navbar-ana{
+  &--small {
+    transition: var(--transition);
+    background-color: var(--cream);
+    height: 100vh;
+
+    .navbar-ana--content {
+      padding-top: 10vh;
+    }
+
+    li {
+      background-image: linear-gradient(
+          to right,
+          var(--purple),
+          var(--purple) 50%,
+          var(--black) 50%
+      );
+    }
+  }
+}
+

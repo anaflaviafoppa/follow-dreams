@@ -9,7 +9,7 @@
 
 
   @media only screen and (max-width:  v.$media-query-small) {
-    height: fit-content;
+    height: calc(100vh - var(--height-nav-bar) - 4rem - 8vh);
   }
 
   &--content {
@@ -101,7 +101,7 @@
   }
 
   &--image {
-    width: 80rem;
+    width: 70vw;
     height: 36rem;
     margin-left: 1rem;
     background-position: center center;
@@ -143,7 +143,7 @@
 
     @media only screen and (max-width:  v.$media-query-small) and (min-width: v.$media-query-smallest) {
       width: calc(50% - 1rem);
-      align-items: center;
+      align-items: flex-start;
     }
 
     @media only screen and (max-width:  v.$media-query-medium) and (min-width: v.$media-query-small) {

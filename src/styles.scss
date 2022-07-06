@@ -13,6 +13,12 @@
   --arrow-up: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3LjkzOSAxNi41NjFMMTIgMTAuNjIxTDYuMDYwOTYgMTYuNTYxTDMuOTM4OTYgMTQuNDM5TDEyIDYuMzc5MDNMMjAuMDYxIDE0LjQzOUwxNy45MzkgMTYuNTYxWiIgZmlsbD0iIzY2NjY2NiIvPgo8L3N2Zz4=');
 
   --position-name-main: 10%;
+
+  //transition
+  --transition: all 0.5s ease;
+
+  //height:
+  --height-nav-bar: 4vh
 }
 
 html {
@@ -50,14 +56,14 @@ body::-webkit-scrollbar-thumb {
 ///RESPONSIVE:
 
 .wrapper{
-  padding: 3rem 5rem 0rem;
+  padding: 3rem 5rem;
 
   @media only screen and (max-width:  v.$media-query-smallest) {
-    padding: 3rem 2rem 0rem;
+    padding: 3rem 2rem;
   }
 
   @media only screen and (max-width:  v.$media-query-small) and (min-width: v.$media-query-smallest) {
-    padding: 3rem 3rem 0rem;
+    padding: 3rem 3rem;
   }
 }
 
@@ -92,6 +98,11 @@ h2 {
 h3 {
   font-size: 2.4rem;
   font-style: normal;
+  font-weight: 500;
+
+  @media only screen and (max-width:  v.$media-query-small) {
+    font-size: 2.2rem;
+  }
 }
 
 h4 {
@@ -108,13 +119,17 @@ ul {
   padding: 0;
   margin: 0;
 
-  @media only screen and (max-width:  v.$media-query-small) {
+  @media only screen and (max-width:  v.$media-query-smallest) {
     font-size: 2.8rem;
   }
 
-  @media only screen and (max-width:  v.$media-query-medium) and (min-width: v.$media-query-smallest) {
-    font-size: 3.2rem;
+  @media only screen and (max-width:  v.$media-query-small) and (min-width: v.$media-query-smallest) {
+    font-size: 2.8rem;
   }
+
+  /*@media only screen and (max-width:  v.$media-query-medium) and (min-width: v.$media-query-smallest) {
+    font-size: 3.2rem;
+  }*/
 }
 
 

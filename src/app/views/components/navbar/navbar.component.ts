@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
   }
 
   isSmallDevice(): boolean {
-    return this.innerWidth < 500;
+    return this.innerWidth <= 750;
   }
 
   expandNavBar() {
