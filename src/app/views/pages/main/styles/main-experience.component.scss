@@ -1,3 +1,28 @@
 .experience-ana {
   background-color: var(--cream);
+
+  &-brands--images {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    padding: 2rem 0;
+
+    img {
+      max-height: 6vh;
+    }
+  }
+
+  &--content {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: 30vw 1fr;
+    align-content: flex-end;
+
+    h2 {
+      max-width: 80%;
+      font-weight: 400;
+      line-height: 1.2;
+      font-size: 3.5rem;
+    }
+  }
 }

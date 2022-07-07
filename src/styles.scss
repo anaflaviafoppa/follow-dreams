@@ -15,10 +15,14 @@
   --position-name-main: 10%;
 
   //transition
-  --transition: all 0.5s ease;
+  --transition: all 0.5s ease-in-out;
 
   //height:
-  --height-nav-bar: 4vh
+  --height-nav-bar: 4vh;
+
+  //borders
+  --border-cream: 0.5rem solid var(--cream);
+  --border-black: 0.5rem solid var(--black);
 }
 
 html {
@@ -56,6 +60,18 @@ body::-webkit-scrollbar-thumb {
 ///RESPONSIVE:
 
 .wrapper{
+  padding: 10rem 3rem 4rem;
+
+  @media only screen and (max-width:  v.$media-query-smallest) {
+    padding: 3rem 2rem;
+  }
+
+  @media only screen and (max-width:  v.$media-query-small) and (min-width: v.$media-query-smallest) {
+    padding: 8rem 3rem 4rem;
+  }
+}
+
+.wrapper-small{
   padding: 3rem 5rem;
 
   @media only screen and (max-width:  v.$media-query-smallest) {
@@ -67,9 +83,26 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.wrapper-side{
+  padding: 0rem 5rem;
+
+  @media only screen and (max-width:  v.$media-query-smallest) {
+    padding: 0rem 2rem;
+  }
+
+  @media only screen and (max-width:  v.$media-query-small) and (min-width: v.$media-query-smallest) {
+    padding: 0rem 3rem;
+  }
+}
+
 p {
   font-size: 2rem;
   font-weight: 400;
+  margin: 0;
+
+  @media only screen and (max-width:  v.$media-query-smallest) {
+    font-size: 1.6rem;
+  }
 }
 
 h1 {
@@ -93,6 +126,11 @@ h2 {
   font-size: 3.5rem;
   font-weight: 500;
   font-style: normal;
+  line-height: 1.2;
+
+  @media only screen and (max-width:  v.$media-query-small) {
+    font-size: 2.2rem;
+  }
 }
 
 h3 {
@@ -108,6 +146,13 @@ h3 {
 h4 {
   font-size: 2.4rem;
   font-style: normal;
+  line-height: 1.4;
+  font-weight: 500;
+  margin: 0;
+
+  @media only screen and (max-width:  v.$media-query-smallest) {
+    font-size: 2.2rem;
+  }
 }
 
 ul {
