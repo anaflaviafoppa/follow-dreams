@@ -4,13 +4,20 @@
   background-color: var(--cream);
 
   &-brands--images {
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
 
     img {
-      max-height: 6vh;
+      height: 6vh;
+      justify-self: center;
+    }
+
+    @media only screen and (max-width:  v.$media-query-small) {
+      grid-template-columns: 1fr;
+      grid-gap: 4rem;
     }
   }
 
@@ -26,6 +33,14 @@
     grid-template-columns: 2fr 1fr;
     align-content: flex-end;
     justify-content: flex-end;
+
+    @media only screen and (max-width:  v.$media-query-small) {
+      display: block;
+
+      h4 {
+        margin-top: var(--intern-space);
+      }
+    }
 
     h4 {
       max-width: 80%;
