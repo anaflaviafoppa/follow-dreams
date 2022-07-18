@@ -29,4 +29,14 @@ export class NavbarComponent implements OnInit {
     this.isNavBarExpanded = !this.isNavBarExpanded
   }
 
+  closeNavBar(event: any) {
+    console.log('up');
+    this.isNavBarExpanded = false;
+  }
+
+  openNavBar(event: any) {
+    console.log('down');
+    this.isNavBarExpanded = true;
+  }
+
 }

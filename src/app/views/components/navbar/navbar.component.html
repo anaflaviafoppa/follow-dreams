@@ -1,5 +1,8 @@
 <nav class="navbar-ana wrapper-small"
 [class.navbar-ana--small]="isNavBarExpanded"
+     (swipeup)="closeNavBar($event)"
+     (swipedown)="openNavBar($event)"
+
 >
   <div class="navbar-ana--controller">
     <div class="navbar-ana--dot"
@@ -7,7 +10,8 @@
     >
     </div>
 
-    <div  *ngIf="isSmallDevice()" (click)="expandNavBar()">
+    <div  *ngIf="isSmallDevice()"
+          (click)="expandNavBar()">
       <div class="navbar-ana--stripes"
       >
         <div class="navbar-ana--stripes-light"

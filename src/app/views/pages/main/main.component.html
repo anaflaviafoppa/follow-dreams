@@ -27,8 +27,8 @@
   </div>
 </section>
 
-<section class="experience-ana wrapper">
-  <div class="experience-ana-brands">
+<section class="experience-ana">
+  <div class="experience-ana-brands wrapper">
     <h3>Brands that I've worked with:</h3>
     <div class="experience-ana-brands--images">
       <img src="assets/images/bmw.svg">
@@ -38,41 +38,38 @@
     </div>
   </div>
 
-  <div  class="experience-ana--description">
-    <div class="experience-ana--content">
-      <h3>Experience:</h3>
-      <h2>Creating solutions and improves the quality
+  <div  class="experience-ana--description ">
+    <div class="experience-ana--content wrapper">
+      <div class="experience-ana--image"></div>
+      <h4>Creating solutions and improves the quality
         of websites, applications
-        and branding management on the Internet security.</h2>
+        and branding management on the Internet security.</h4>
     </div>
 
 
     <div class="experience-ana--experiences">
-      <div class="experience-ana--experiences-brand">
-        <h2>Critical Techworks - Software Developer</h2>
-        <p>www.criticaltechworks.com</p>
-
-        <p>fev 2021 - present</p>
-        <p>Angular, Typescript, Nodejs and Java.</p>
-      </div>
-
-      <div class="experience-ana--experiences-brand">
-        <h2>YourCode - Front End Developer</h2>
-        <p>www.yourcode.pt</p>
-
-        <p>jun 2020 - fev 2021</p>
-        <p>VueJS, JavaScript, Vuex, Vuetify and APIS.</p>
-      </div>
-
-      <div class="experience-ana--experiences-brand">
-        <h2>Civil engineer - Foppa Engenharia</h2>
-
-        <p>set 2017 - dez 2019</p>
-        <p>Ana Flavia managed several engineering projects,
-          focusing on structural analysis.
-          Structural projects are responsible for the design of slabs,
-          beams, columns, foundations.</p>
-      </div>
+      <ana-experience
+        [title]="'Software Developer'"
+        [period]="'fev 2021 - present'"
+        [technologies]="'Angular, Typescript, Nodejs and Java.'"
+        [contact]="'www.criticaltechworks.com'"
+        [company]="'Critical Techworks'"
+      >
+      </ana-experience>
+      <ana-experience
+        [title]="'Front End Developer'"
+        [period]="'jun 2020 - fev 2021'"
+        [technologies]="'VueJS, JavaScript, Vuex, Vuetify and APIS.'"
+        [contact]="'www.yourcode.pt'"
+        [company]="'YourCode'"
+      >
+      </ana-experience>
+      <ana-experience
+        [title]="'Structure engineer'"
+        [period]="'set 2017 - dez 2019'"
+        [company]="'Foppa Engenharia'"
+      >
+      </ana-experience>
     </div>
   </div>
 </section>

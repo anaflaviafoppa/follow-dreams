@@ -23,6 +23,9 @@
   //borders
   --border-cream: 0.5rem solid var(--cream);
   --border-black: 0.5rem solid var(--black);
+
+  //space:
+  --intern-space: 5rem;
 }
 
 html {
@@ -175,6 +178,48 @@ ul {
   /*@media only screen and (max-width:  v.$media-query-medium) and (min-width: v.$media-query-smallest) {
     font-size: 3.2rem;
   }*/
+}
+
+a {
+  font-size: 1.2rem;
+}
+
+.hover-to-purple {
+  background-image: linear-gradient(
+      to right,
+      var(--purple),
+      var(--purple) 50%,
+      var(--black) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-position: 0;
+  }
+}
+
+.hover-to-cream {
+  background-image: linear-gradient(
+      to right,
+      var(--cream),
+      var(--cream) 50%,
+      var(--black) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-position: 0;
+  }
 }
 
 

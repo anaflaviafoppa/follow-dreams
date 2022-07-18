@@ -108,7 +108,7 @@
       }
 
       li {
-        font-size: 9rem;
+        font-size: 6rem;
         text-transform: uppercase;
         letter-spacing: -0.05em;
         line-height: 0.8;
@@ -120,6 +120,7 @@
 
 .navbar-ana{
   &--small {
+    display: block;
     transition: var(--transition);
     background-color: var(--cream);
     height: 100vh;

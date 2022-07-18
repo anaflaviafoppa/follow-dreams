@@ -8,8 +8,9 @@ export enum Route {
 
 const routes: Routes = [
   {
-    path: '**',
+    path: '',
     component: MainComponent,
+    pathMatch: 'full'
   }
 ];
 
