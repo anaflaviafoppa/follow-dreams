@@ -25,10 +25,10 @@
   <div class="navbar-ana--content" *ngIf="!isSmallDevice() || isNavBarExpanded">
     <div  class="navbar-ana--links">
       <ul>
-        <li>Experience</li>
-        <li>About me</li>
-        <li>FAQ</li>
-        <li>Contact me</li>
+        <li (click)="navigateTo('experience')">Experience</li>
+        <li (click)="navigateTo('about-me')">About me</li>
+        <li (click)="navigateTo('faq')">FAQ</li>
+        <li (click)="navigateTo('contact')">Contact me</li>
       </ul>
     </div>
   </div>

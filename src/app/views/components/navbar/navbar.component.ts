@@ -1,4 +1,5 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, Input, OnInit} from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'ana-navbar',
@@ -7,10 +8,11 @@ import {Component, HostListener, OnInit} from '@angular/core';
 })
 
 export class NavbarComponent implements OnInit {
+
   innerWidth: number = 0;
   isNavBarExpanded: boolean = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
@@ -37,6 +39,11 @@ export class NavbarComponent implements OnInit {
   openNavBar(event: any) {
     console.log('down');
     this.isNavBarExpanded = true;
+  }
+
+  navigateTo(id: string) {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
   }
 
 }
