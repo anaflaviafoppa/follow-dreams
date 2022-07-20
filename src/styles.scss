@@ -16,6 +16,7 @@
 
   //transition
   --transition: all 0.5s ease-in-out;
+  --transition-fast: all 0.3s ease;
 
   //height:
   --height-nav-bar: 4vh;
@@ -23,6 +24,7 @@
   //borders
   --border-cream: 0.5rem solid var(--cream);
   --border-black: 0.5rem solid var(--black);
+  --border-purple: 0.5rem solid var(--purple);
 
   //space:
   --intern-space: 5rem;
@@ -184,7 +186,7 @@ a {
   font-size: 1.2rem;
 }
 
-.hover-to-purple {
+.hover-black-to-purple {
   background-image: linear-gradient(
       to right,
       var(--purple),
@@ -203,12 +205,31 @@ a {
   }
 }
 
-.hover-to-cream {
+.hover-black-to-cream {
   background-image: linear-gradient(
       to right,
       var(--cream),
       var(--cream) 50%,
       var(--black) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-position: 0;
+  }
+}
+
+.hover-cream-to-purple {
+  background-image: linear-gradient(
+      to right,
+      var(--purple),
+      var(--purple) 50%,
+      var(--cream) 50%
   );
   background-size: 200% 100%;
   background-position: -100%;

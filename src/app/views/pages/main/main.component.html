@@ -1,7 +1,7 @@
 <ana-navbar
 ></ana-navbar>
 <section class="main-ana wrapper">
-  <div class="main-ana--content ">
+  <div class="main-ana--content " id="main">
     <div class="main-ana--name">
       <h1>{{'Ana' | uppercase}}</h1>
       <h1>{{'Flavia Foppa'  | uppercase}}</h1>
@@ -27,7 +27,10 @@
   </div>
 </section>
 
-<section class="experience-ana">
+
+
+<section class="experience-ana"
+>
   <div class="experience-ana-brands wrapper">
     <h3>Brands that I've worked with:</h3>
     <div class="experience-ana-brands--images">
@@ -38,8 +41,8 @@
     </div>
   </div>
 
-  <div  class="experience-ana--description ">
-    <div class="experience-ana--content wrapper">
+  <div  class="experience-ana--description" >
+    <div class="experience-ana--content wrapper" id="about-me">
       <div class="experience-ana--image"></div>
       <h4>Creating solutions and improves the quality
         of websites, applications
@@ -47,7 +50,7 @@
     </div>
 
 
-    <div class="experience-ana--experiences">
+    <div class="experience-ana--experiences" id="experience">
       <ana-experience
         [title]="'Software Developer'"
         [period]="'fev 2021 - present'"
@@ -74,7 +77,7 @@
   </div>
 </section>
 
-<section class="faq-ana">
+<section class="faq-ana" id="faq">
   <ana-accordion
     question="Why did you feel the need of a change in your career choices?"
     text="I've always admired Civil Engineering, and it was this area that allowed me to develop my logical thinking, in major grades such as Calculus and its five-hour tests. Despite of that, I realised that the innovation on civil engineering is quite slow and new methods aren't always encouraged. My goal in life is finding a perfect sync between logic, visual arts and constant innovation, and that seemed to be lacking on traditional Civil Engineering. I appreciate all the knowledge that engineering has given me,
@@ -108,6 +111,7 @@
 </section>-->
 
 <ana-footer
+  id="contact"
 ></ana-footer>
 
 

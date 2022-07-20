@@ -11,6 +11,7 @@ import { FooterComponent } from './views/components/footer/footer.component';
 // @ts-ignore
 import * as Hammer from 'hammerjs';
 import { ExperienceComponent } from './views/components/experience/experience.component';
+import { TooltipComponent } from './views/components/tooltip/tooltip.component';
 
 
 @Injectable()
@@ -29,6 +30,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     AccordionComponent,
     FooterComponent,
     ExperienceComponent,
+    TooltipComponent,
   ],
   imports: [
     BrowserModule,
